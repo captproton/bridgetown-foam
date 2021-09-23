@@ -1,0 +1,21 @@
+baseurl: "" # OPTIONAL: the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
+permalink: /:slug
+# timezone: America/Los_Angeles
+exclude:
+  - '_data/notes_graph.json'
+
+collections:
+  notes:
+    output: true
+    permalink: /:slug
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "_notes/**/*.md"
+    values:
+      layout: "note"
